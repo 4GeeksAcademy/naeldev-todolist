@@ -1,28 +1,67 @@
-import React from "react";
+import React, { useState } from "react";
+import Body from "./toDo";
 
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 const Home = () => {
-	return (
-		<div className="text-center">
-            
+	const [inputValue, setInputValue] = useState('');
+	const [tasks, setTask] = useState([]);
+	let count =0;
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
+	const handleChange = (e) => {
+		setInputValue(e.target.value);
+		
+	}
+	const addTask =e => {
+		e.preventDefault();
+		if(inputValue.trim()=== ''){
+			alert('Debe contener un valor')
+			return;
+		}
+		setTask([...tasks, inputValue]);
+		setInputValue('');
+		count = tasks.length+1;
+		console.log(tasks.length+1)
+	
+	}
+	count = tasks.length;
+	
+
+
+	return (
+	<>
+			<div className=" text-center container-fluid m-5 p-2">
+				<div className=" d-flex justify-content-center ">
+					<h1 className="center">To DoS...</h1>
+				</div>
+			</div>
+			<div className="post-it">
+				<Body
+					handleChange={handleChange}
+					value={inputValue}
+					addTask={addTask}
+
+
+				/>
+				<div className="mt-3 text-center">
+					{tasks.map((task, index) => (
+						<p key={index} className="border p-2">{task}</p>
+					))}
+				</div>
+				<div>
+					{count === 0 ? "No hay tareas pendientes" : `${count} tareas pendientes`}
+
+				</div>
+			</div>
+
+
+
+
+		</>
+	)
+
 };
 
 export default Home;

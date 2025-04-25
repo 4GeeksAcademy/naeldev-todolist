@@ -9,3 +9,47 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+     
+        background: radial-gradient(circle, #fff, #eee, #ccc, #747373); 
+        
+      
+}
+.container-title{
+    width: 300px;
+    height: 300%;
+    border:2px solid red;
+  
+}
+.center{
+    
+    font-size: 8rem;
+}
+
+
+.post-it {
+    width: 600px;
+    height: 600px;
+    background: #ffd700; /* Amarillo post-it */
+    padding: 15px;
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente informal */
+    box-shadow: 
+        2px 2px 5px rgba(0, 0, 0, 0.3), /* Sombra base */
+        5px 5px 0px 0px rgba(0, 0, 0, 0.1); /* Efecto 3D */
+    transform: rotate(2deg); /* Pequeña inclinación */
+    position: relative;
+    margin: auto;
+}
+
+/* Efecto de doblez en la esquina inferior derecha */
+.post-it::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 15px 0 0;
+    border-color: #e6c200 transparent transparent transparent;
+}
