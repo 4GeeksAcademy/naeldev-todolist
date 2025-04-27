@@ -33,6 +33,7 @@ body{
     background: #ffd700; 
     padding: 15px;
     font-family: 'Comic Sans MS', cursive, sans-serif; 
+    font-size: 1.2rem;
     box-shadow: 
         2px 2px 5px rgba(0, 0, 0, 0.3),
         5px 5px 0px 0px rgba(0, 0, 0, 0.1); 

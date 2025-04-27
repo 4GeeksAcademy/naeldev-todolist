@@ -58,18 +58,23 @@ const Home = () => {
 				/>
 				<div className="mt-3 text-center">
 					{tasks.map((task, index) => (
-						<p
-							key={index}
-							className="text-center p-2">
+						
+						<div key={index} className="text-center p-2 d-flex align-items-center">
+						<input 
+							className="form-check-input me-2" 
+							type="checkbox" 
+							value="" 
+						/>
+						<span className="flex-grow-1 text-center">
 							{task}
-							<button
-								onClick={()=>deleteTask(index)}
-								type="button"
-								className="btn boton float-end ">
-								x
-							</button>
-						</p>
-
+						</span>
+						<button
+							onClick={() => deleteTask(index)}
+							type="button"
+							className="btn boton">
+							x
+						</button>
+					</div>
 
 					))}
 
