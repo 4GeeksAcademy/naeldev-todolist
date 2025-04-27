@@ -18,7 +18,7 @@ body{
 .container-title{
     width: 300px;
     height: 300%;
-    border:2px solid red;
+   
   
 }
 .center{
@@ -28,20 +28,20 @@ body{
 
 
 .post-it {
-    width: 600px;
-    height: 600px;
-    background: #ffd700; /* Amarillo post-it */
+    width: 700px;
+    height: 700px;
+    background: #ffd700; 
     padding: 15px;
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente informal */
+    font-family: 'Comic Sans MS', cursive, sans-serif; 
     box-shadow: 
-        2px 2px 5px rgba(0, 0, 0, 0.3), /* Sombra base */
-        5px 5px 0px 0px rgba(0, 0, 0, 0.1); /* Efecto 3D */
-    transform: rotate(2deg); /* Pequeña inclinación */
+        2px 2px 5px rgba(0, 0, 0, 0.3),
+        5px 5px 0px 0px rgba(0, 0, 0, 0.1); 
+    transform: rotate(2deg); 
     position: relative;
     margin: auto;
 }
 
-/* Efecto de doblez en la esquina inferior derecha */
+
 .post-it::after {
     content: "";
     position: absolute;
@@ -53,3 +53,11 @@ body{
     border-width: 15px 15px 0 0;
     border-color: #e6c200 transparent transparent transparent;
 }
+.boton{
+  opacity: 0;
+  transition:opacity 0.3s ease;
+}
+
+.boton:hover{
+       opacity:1;
+  }
