@@ -10,7 +10,8 @@ const Body = ({handleChange, inputValue,addTask}) => {
                     value={inputValue} 
                     placeholder="Ingresa la tarea"
                     onChange={handleChange}
-                    className="form-control"
+                    className="form-control me-2"
+                    maxLength={120}
                 />
         
                 

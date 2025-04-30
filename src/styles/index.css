@@ -40,6 +40,7 @@ body{
     transform: rotate(2deg); 
     position: relative;
     margin: auto;
+    overflow-y: auto;
 }
 
 
@@ -62,3 +63,4 @@ body{
 .boton:hover{
        opacity:1;
   }
+
